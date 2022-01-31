@@ -7,4 +7,6 @@ const pokemonController = new PokemonController()
 
 router.get('/hello', pokemonController.helloWorld)
 
+router.post('/pokemons', pokemonController.create)
+
 export default router

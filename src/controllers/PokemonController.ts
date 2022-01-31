@@ -20,6 +20,11 @@ class PokemonController {
     try {
       const pokemon = new Pokemon<IPokemon>(req.body)
 
+      const pokemonAlreadyExists = await Pokemon.findOne({ name: req.body.name })
+      if (pokemonAlreadyExists?.name) {
+        throw new Error('Uh-oh, this pokemon already exists')
+      }
+
       await pokemon.save()
       return res.status(201).send(pokemon)
     } catch (err) {

@@ -1,19 +1,23 @@
-import { Entity, ObjectID, ObjectIdColumn, Column } from 'typeorm'
+import * as mongoose from 'mongoose'
+import { IPokemon } from '../interfaces/IPokemon'
 
-@Entity()
-export class Pokemon {
-  @ObjectIdColumn()
-  readonly _id: ObjectID;
+const pokemonSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  baseExperience: {
+    type: Number,
+    required: false
+  },
+  height: {
+    type: Number,
+    required: false
+  },
+  weight: {
+    type: Number,
+    required: false
+  }
+})
 
-  @Column()
-  name: string;
-
-  @Column()
-  baseExperience: number;
-
-  @Column()
-  height: number;
-
-  @Column()
-  weight: number;
-}
+export const Pokemon = mongoose.model<IPokemon>('Pokemon', pokemonSchema)

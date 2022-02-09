@@ -1,32 +1,26 @@
 # Pokemon API
 
-Hello =), this API is made to reinforce the content of the study on data consumption from external APIs, the basic idea is to make a CRUD that works with MongoDB, and also allow the creation of data in a database when received from the external API.
+Hello =), this API is made to reinforce the content of the study on data consumption from external APIs, the basic idea is to make a CRUD that works with Amazon DynamoDB, also allow the creation of data in a database when received from the external API, and send a message with Amazon SNS.
 
 ## > You're gonna need it :
 
 * NodeJS - [Node.js v14.17.3](https://nodejs.org/en/)
 * Node Package Manager - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* Docker & Docker-Compose - [Docker Community Edition](https://hub.docker.com/search/?type=edition&offering=community)
-* To manage MongoDB - [Robo3T](https://robomongo.org/) or another of your choice
+* AWS CLI - [aws](https://aws.amazon.com/pt/cli/)
 * To send requests - [Postamn](https://www.postman.com/downloads/) or another of your choice
 
 ## > To work with it :
 * Node.JS
 * TypeScript
 * Express
-* Docker Compose
-* MongoDB
-* Mongoose
+* DynamoDB
+* AWS-SDK
 
 ## > Ready? Let's go :
 
 > Use NPM package manager to install project dependencies
 ```typescript
 pokemon-api npm install
-```
-> Start creating a container for the project with
-```typescript
-pokemon-api docker-compose up
 ```
 > Connect Localhost to Data Base with
 ```typescript

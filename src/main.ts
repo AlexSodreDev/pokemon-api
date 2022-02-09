@@ -3,14 +3,12 @@ import 'reflect-metadata'
 import express from 'express'
 
 import pokemonsRoute from './routes/pokemon.routes'
-// import { database } from './configs/Database'
 
 import { config } from 'dotenv'
 
 (async function main() {
   config()
   try {
-    // await database.connect()
     const app = express()
     app.use(express.json())
     app.use(pokemonsRoute)

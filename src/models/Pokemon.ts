@@ -1,23 +1,13 @@
-import * as mongoose from 'mongoose'
-import { IPokemon } from '../interfaces/IPokemon'
+class Pokemon {
+  name: string
 
-const pokemonSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  baseExperience: {
-    type: Number,
-    required: false
-  },
-  height: {
-    type: Number,
-    required: false
-  },
-  weight: {
-    type: Number,
-    required: false
-  }
-})
+  baseExperience: number
 
-export const Pokemon = mongoose.model<IPokemon>('Pokemon', pokemonSchema)
+  height: number
+
+  weight: number
+
+  gameIndices: string
+}
+
+export { Pokemon }

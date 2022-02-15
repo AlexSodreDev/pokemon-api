@@ -7,7 +7,7 @@ Hello =), this API is made to reinforce the content of the study on data consump
 * NodeJS - [Node.js v14.17.3](https://nodejs.org/en/)
 * Node Package Manager - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * AWS CLI - [aws](https://aws.amazon.com/pt/cli/)
-* To send requests - [Postamn](https://www.postman.com/downloads/) or another of your choice
+* To send requests - [Postman](https://www.postman.com/downloads/) or another of your choice
 
 ## > To work with it :
 * Node.JS
